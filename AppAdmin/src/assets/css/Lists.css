@@ -1,0 +1,44 @@
+.categories-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 80vh; /* alçada total de la llista */
+}
+
+.categories-status {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  padding: 40px 20px;
+}
+
+.categories-error {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* Grid de categories: 4 per fila amb separació en tots els costats */
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per fila */
+  gap: 12px; /* separació entre files i columnes */
+  padding: 12px; /* separació als 4 costats */
+  overflow-y: auto; /* scroll vertical només de la llista */
+  max-height: calc(80vh - 60px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .categories-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-list {
+    grid-template-columns: 1fr;
+  }
+}

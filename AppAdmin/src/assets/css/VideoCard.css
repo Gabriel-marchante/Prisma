@@ -1,0 +1,148 @@
+.video-card {
+  position: relative; /* Important per al botó absolut */
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* HEADER */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* BUTTON */
+.edit-btn {
+  position: absolute;    /* es fixa dins de la targeta */
+  top: 12px;             /* distància superior */
+  right: 12px;           /* distància dreta */
+  width: 32px;           /* mida fixa */
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  padding: 0;            /* sense padding extra */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+/* HEADER (ara només per al títol) */
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.edit-btn:hover {
+  background: #e67e22;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #ddd;
+}
+
+/* IMAGE + DESCRIPTION */
+.top-content {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+}
+
+.thumbnail {
+  width: 180px;
+  height: 120px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 120px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* META BLOCKS */
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.meta-box {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  background: #f1f1f1;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+/* 2 CARDS PER ROW */
+@media (min-width: 900px) {
+  .video-card {
+    max-width: calc(90% - 10px);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .top-content {
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 160px;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}

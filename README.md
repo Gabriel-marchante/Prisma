@@ -174,17 +174,15 @@ docker compose up -d
 | `POST` | `/sub/cancel/:user` | Cancela suscripción |
 | `PUT` | `/sub/payment/:id` | Modifica método de pago |
 
+
+
 ---
 
-## 👨‍💻 Autor
+## ✍️ Créditos
 
-**Gabriel Marchante Bañuls**
+Desarrollado por **Macloud Team (Gabriel Marchante)**. Inspirado en herramientas de seguridad clásicas y estética retro-futurista.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-m-833856242/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Gabriel-marchante)
 
 ---
-
-<div align="center">
-  <i>Proyecto de fin de ciclo — DAM Superior · 2025</i>
-</div>
